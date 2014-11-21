@@ -20,3 +20,9 @@ After settin up the Vagrant box with the provisioning script, you can add cores 
 3. restart Apache Tomcat `sudo service tomcat6 restart`
 
 You will find the loggin files in /var/logs/tomcat/ .
+
+## FAQ
+
+### I can not connect to my vagrant box from (Arch)linux.
+
+You probably need to install some addiotional drivers for both Virtual box and your host system, see the [Arch linux wiki](https://wiki.archlinux.org/index.php/VirtualBox#Load_the_VirtualBox_kernel_modules) for how to set it up on Arch.
