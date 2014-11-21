@@ -88,8 +88,8 @@ sudo echo "<Context docBase=\"/usr/share/tomcat6/webapps/solr4.war\" debug=\"0\"
 echo "Set filepermissions"
 #sudo chown -R tomcat6 /usr/share/solr/
 sudo chgrp -R tomcat6 /usr/share/solr4
-sudo chmod -R 2750 /usr/share/solr4
-sudo chmod -R 2770 /usr/share/solr4/triquanta/multicore/
+sudo chmod -R 2755 /usr/share/solr4
+sudo chmod -R 2775 /usr/share/solr4/triquanta/multicore/
 sudo chmod -R o+x /usr/share/tomcat6/lib
 
 # Setup Tomcat user.
