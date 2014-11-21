@@ -86,11 +86,15 @@ sudo echo "<Context docBase=\"/usr/share/tomcat6/webapps/solr4.war\" debug=\"0\"
 
 # Set filepermissions
 echo "Set filepermissions"
-#sudo chown -R tomcat6 /usr/share/solr/
 sudo chgrp -R tomcat6 /usr/share/solr4
 sudo chmod -R 2755 /usr/share/solr4
 sudo chmod -R 2775 /usr/share/solr4/triquanta/multicore/
 sudo chmod -R o+x /usr/share/tomcat6/lib
+
+# Configure log4j logging
+echo "Configure log4j loggin"
+sudo cp /usr/share/solr4/triquanta/resources/log4j.properties /usr/share/tomcat6/lib
+sudo chown tomcat6:tomcat6 /usr/share/tomcat6/lib/log4j.properties
 
 # Setup Tomcat user.
 echo "Setup Tomcat user."
